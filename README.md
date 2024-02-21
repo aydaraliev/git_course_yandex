@@ -52,5 +52,8 @@ git remote add origin <URL вашего репозитория на GitHub>
 
 ### Отправка ваших коммитов на GitHub
 ```bash
+# Для первого пуша
 git push -u origin main
+# Для последующих пушей часть "-u origin main" не обязательна
+git push
 ```
