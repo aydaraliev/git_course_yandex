@@ -86,7 +86,7 @@ HEAD это текстовый файл в папке .git в котором с�
 
 ```mermaid
 graph TD;
-    A-->B;
+    untracked--git add-->staged;
     A-->C;
     B-->D;
     C-->D;
