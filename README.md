@@ -86,13 +86,12 @@ HEAD это текстовый файл в папке .git в котором с�
 
 ```mermaid
 graph LR;
-  untracked           -- "git add"    --> staged + tracked;
-  staged + tracked    -- "git commit" --> comitted + tracked;
-  staged + tracked    -- "changes"    --> modified;
-  modified            -- "git add"    --> staged + tracked;
-  commited + tracked  -- "changes"    --> modified;
+  untracked           -- "git add"    --> "staged + tracked";
+  "staged + tracked"    -- "git commit" --> "committed + tracked";
+  "staged + tracked"    -- "changes"    --> modified;
+  modified            -- "git add"    --> "staged + tracked";
+  "committed + tracked"  -- "changes"    --> modified;
 ```
-
 
 ### Как читать git status
 Типичные варианты вывода git status: без изменений, с найденными неотслеживаемыми файлами, с изменениями, которые не войдут в коммит, и с изменениями, которые уже попали в коммит. В случае изменений файла, git status может показать его состояние как "staged" и "modified".
