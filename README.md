@@ -87,9 +87,10 @@ HEAD это текстовый файл в папке .git в котором с�
 ```mermaid
 graph TD;
     untracked--git add-->staged;
-    A-->C;
-    B-->D;
-    C-->D;
+    staged--git commit-->commited;
+    staged--changes to a file-->modified;
+    modified--git add-->D;
+    commited--changes to a file-->modified;
 ```
 
 ### Как читать git status
