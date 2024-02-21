@@ -85,12 +85,11 @@ HEAD это текстовый файл в папке .git в котором с�
 схема измения статусов:
 
 ```mermaid
-graphLR;
-  untracked--"git add"-->"staged + tracked";
-  "staged + tracked"--"git commit"-->"committed + tracked";
-  "staged + tracked"--"changes"--> modified;
-  modified--"git add"-->"staged + tracked";
-  "committed + tracked"--"changes"--> modified;
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
 ```
 
 ### Как читать git status
